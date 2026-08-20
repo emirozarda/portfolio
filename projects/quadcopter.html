@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D Printed Quadcopter — Emir Ozarda | Mechanical Design Portfolio</title>
+<meta name="description" content="Case study: a generatively-designed, stress-validated search-and-rescue quadcopter frame — from concept in Fusion 360 through static stress analysis to 3D-printed nylon manufacturing.">
+<link rel="canonical" href="https://emirozarda.com/projects/quadcopter.html">
+<meta property="og:title" content="3D Printed Quadcopter — Emir Ozarda">
+<meta property="og:description" content="A generatively-designed search-and-rescue quadcopter frame, from concept through CAD, stress analysis, and manufacturing.">
+<meta property="og:image" content="/images/quadcopter/hero.jpg">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="sheet-frame"><i></i></div>
+
+<header class="site-header">
+  <div class="header-row">
+    <a href="/" class="brand">
+      <span class="name">Emir Ozarda</span>
+      <span class="role">Mechanical Designer / EIT</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <nav class="main-nav">
+      <a href="/"><span class="idx">00</span>Home</a>
+      <a href="/projects/" class="current"><span class="idx">01</span>Projects</a>
+      <a href="/experience.html"><span class="idx">02</span>Experience</a>
+      <a href="/about.html"><span class="idx">03</span>About</a>
+      <a href="/resume.html"><span class="idx">04</span>Resume</a>
+      <a href="/contact.html"><span class="idx">05</span>Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="case-hero">
+    <div class="case-hero-top">
+      <div class="breadcrumb">
+        <a href="/projects/">Projects</a><span>/</span><span style="color:var(--ink);">Quadcopter</span>
+      </div>
+      <div class="case-meta-grid">
+        <div>
+          <span class="label accent">Flagship Project — Sheet 01.1</span>
+          <h1 style="margin-top:14px;">3D Printed<br>Quadcopter</h1>
+          <p class="desc">A generatively-designed frame for a post-disaster search-and-rescue drone — validated with static stress analysis and 3D printed in nylon 6.</p>
+        </div>
+        <div class="case-side">
+          <div class="row"><div class="k">Role</div><div class="v">Sole Designer</div></div>
+          <div class="row"><div class="k">Timeline</div><div class="v">Jun 2022 – Jan 2023</div></div>
+          <div class="row"><div class="k">Tools</div><div class="v">Fusion 360, Generative Design, FEA</div></div>
+          <div class="row"><div class="k">Manufacturing</div><div class="v">FDM 3D Printing (Nylon 6)</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="case-hero-image">
+      <img src="/images/quadcopter/hero.jpg" alt="Completed 3D printed quadcopter frame, nylon 6, shown from above with propellers and electronics installed" width="1800" height="1350">
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="wrap reveal" style="margin-top:44px;">
+    <div class="dim-row">
+      <div class="dim-stat"><div class="num">370 g</div><div class="lbl">MASS REMOVED FROM THE FRAME VIA GENERATIVE DESIGN</div></div>
+      <div class="dim-stat"><div class="num">4 : 1</div><div class="lbl">THRUST-TO-WEIGHT RATIO ACHIEVED</div></div>
+      <div class="dim-stat"><div class="num">2</div><div class="lbl">MANUFACTURING METHODS BUILT — 3D PRINT &amp; CNC WATERJET</div></div>
+    </div>
+  </div>
+
+  <!-- OVERVIEW -->
+  <section class="case-block reveal">
+    <div class="case-block-inner two-col">
+      <div class="prose">
+        <span class="label accent">01 — Overview</span>
+        <h3 style="margin-top:12px; font-size:22px; font-family:var(--head);">Why a search-and-rescue drone</h3>
+        <p style="margin-top:16px;">It began with a simple, personal motivation: my home country, Turkey, sits across several major fault lines. Post-disaster search-and-rescue teams need small, resilient remotely piloted aircraft that can get into collapsed structures where people can't. I set out to design a quadcopter frame around that mission — one that was light enough to fly efficiently, tough enough to survive rough landings, and simple enough to build with accessible manufacturing methods.</p>
+        <p>The full reasoning and requirements are laid out in the original design proposal, written before any CAD work started.</p>
+        <a href="https://docs.google.com/presentation/d/17rPfS__y2MfXaJgFRvejOk_yrlsJH3Rb8BXvigRY5cM/edit?usp=sharing" target="_blank" rel="noopener" class="btn btn-ghost" style="margin-top:8px;">
+          Read the Design Proposal
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+        </a>
+      </div>
+      <figure class="figure">
+        <img src="/images/quadcopter/mesh-closeup.jpg" alt="Close-up of the generative lattice mesh on the quadcopter frame, showing the organic load-path geometry" loading="lazy">
+        <figcaption><span>Generative lattice, close-up</span><span>Fusion 360</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- DESIGN PROCESS: GENERATIVE DESIGN -->
+  <section class="case-block reveal">
+    <div class="case-block-inner">
+      <div class="case-block-head"><span class="n">02</span><h2>Design Process — Generative Design &amp; Key Features</h2></div>
+      <div class="two-col">
+        <div class="prose">
+          <p>The body was built around Fusion 360's generative design tools: instead of sketching a frame and thinning it out by hand, I defined the load cases, keep-out zones, and mounting points, then let the solver propose structures that minimized mass while meeting the load requirements. That process is what drove the frame's organic, lattice-like appearance — every strand of material is there because it's carrying load, not because it looked right on paper.</p>
+          <p>That approach removed <strong>370&nbsp;g</strong> from the frame compared to a conventional solid design, while keeping enough structure to hit a <strong>4:1 thrust-to-weight ratio</strong> once the motors and propellers were sized against it.</p>
+        </div>
+        <figure class="figure">
+          <img src="/images/quadcopter/mesh-frame.jpg" alt="Generative-type mesh structure on the quadcopter body, designed to enhance structural stability while limiting total weight" loading="lazy">
+          <figcaption><span>Body mesh generation</span><span>Fusion 360</span></figcaption>
+        </figure>
+      </div>
+
+      <ul class="feature-list" style="margin-top:56px;">
+        <li>
+          <span class="ft">FEATURE</span>
+          <div>
+            <h4>Generative-type mesh</h4>
+            <p>Enhances structural stability while limiting total weight and staying aesthetically clean — the mesh pattern follows the frame's real load paths rather than being decorative.</p>
+          </div>
+        </li>
+        <li>
+          <span class="ft">FEATURE</span>
+          <div>
+            <h4>Component tray</h4>
+            <p>A dedicated tray to place and stabilize the electrical components, with wire-routing openings and realistic component models built into the CAD so fit was checked before anything was printed.</p>
+          </div>
+        </li>
+        <li>
+          <span class="ft">FEATURE</span>
+          <div>
+            <h4>Landing gear</h4>
+            <p>Protects the motors and propellers on touchdown and is shaped to dissipate landing impact rather than transmitting it straight into the frame.</p>
+          </div>
+        </li>
+        <li>
+          <span class="ft">FEATURE</span>
+          <div>
+            <h4>Camera mounting points</h4>
+            <p>Built using surface design tools, with a motion study run to confirm the camera's tilt-and-pan motion wasn't obstructed by the surrounding structure.</p>
+          </div>
+        </li>
+      </ul>
+
+      <div class="figure-grid" style="margin-top:32px;">
+        <figure class="figure">
+          <img src="/images/quadcopter/component-tray.jpg" alt="Component tray CAD model showing wire openings and mounting for electrical components" loading="lazy">
+          <figcaption><span>Component tray</span><span>Detail view</span></figcaption>
+        </figure>
+        <figure class="figure">
+          <img src="/images/quadcopter/landing-gear.jpg" alt="Landing gear CAD model designed to protect motors and propellers and absorb landing impact" loading="lazy">
+          <figcaption><span>Landing gear</span><span>Detail view</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAMERA MOTION STUDY -->
+  <section class="case-block reveal">
+    <div class="case-block-inner two-col rev">
+        <figure class="figure">
+          <video src="/videos/camera-tilt-pan.mp4" controls preload="metadata" poster="/images/quadcopter/camera-mount.jpg"></video>
+          <figcaption><span>Camera tilt &amp; pan motion study</span><span>Fusion 360 Motion Study</span></figcaption>
+        </figure>
+      <div class="prose">
+        <span class="label accent">02.1 — Verifying Motion</span>
+        <h3 style="margin-top:12px; font-size:22px; font-family:var(--head);">Camera mount, checked in motion</h3>
+        <p style="margin-top:16px;">The camera mounting points were built with Fusion 360's surface design tools rather than solid extrudes, which gave more control over the mount's exact profile around the gimbal hardware. Before finalizing the geometry, I ran a motion study to sweep the camera through its full tilt-and-pan range and confirm nothing in the surrounding frame clipped or restricted its travel.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATIC STRESS ANALYSIS -->
+  <section class="case-block reveal">
+    <div class="case-block-inner">
+      <div class="case-block-head"><span class="n">03</span><h2>Static Stress Analysis &amp; Design Optimization</h2></div>
+      <div class="two-col">
+        <div class="prose">
+          <p>Once the body design was complete, I ran a static stress analysis to validate it under the drone's operating and landing loads, then used the results to optimize the frame — thickening regions that showed elevated stress concentrations and continuing to remove material where the model showed margin to spare.</p>
+          <p>The Von Mises stress plot below shows the frame under load: stress stays low and well-distributed across the arms, with the expected concentrations at the motor mounts and central body where loads transfer into the structure.</p>
+          <a href="https://docs.google.com/presentation/d/1DuygupuqvPvd_qSjsLpu6teOjeiihiD1Ka8euAXnOcM/edit?usp=sharing" target="_blank" rel="noopener" class="btn btn-ghost" style="margin-top:8px;">
+            Read the Stress Analysis Report
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+          </a>
+        </div>
+        <figure class="figure">
+          <img src="/images/quadcopter/stress-analysis.jpg" alt="Von Mises static stress analysis of the quadcopter frame showing stress distribution under load, ranging from 0 to 5.751 MPa" loading="lazy">
+          <figcaption><span>Von Mises stress — max 5.75 MPa</span><span>Fusion 360 Simulation</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- MANUFACTURING -->
+  <section class="case-block reveal">
+    <div class="case-block-inner">
+      <div class="case-block-head"><span class="n">04</span><h2>Manufacturing</h2></div>
+      <div class="two-col rev">
+        <figure class="figure">
+          <img src="/images/quadcopter/electronics-bay.jpg" alt="Electronics bay of the printed quadcopter frame with flight controller and wiring installed" loading="lazy">
+          <figcaption><span>Electronics installed in the printed frame</span><span>Assembly</span></figcaption>
+        </figure>
+        <div class="prose">
+          <p>The frame was printed in <strong>nylon 6</strong> — a material that holds up to repeated impact far better than the more common PLA or PETG, which matters directly for a drone whose job is to survive hard landings. The generative geometry was compatible with FDM printing without needing significant support material in the load-bearing arms.</p>
+          <p>To get more experience designing for other manufacturing processes, I later adapted the same concept into a CNC-machined aluminum version, cut on a waterjet. That build is documented as its own project, since the design constraints changed substantially between the two methods.</p>
+          <a href="/projects/cnc-frame.html" class="btn btn-ghost" style="margin-top:8px;">See the CNC Machined Version
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENGINEERING DECISIONS -->
+  <section class="case-block reveal">
+    <div class="case-block-inner">
+      <div class="case-block-head"><span class="n">05</span><h2>Engineering Decisions</h2></div>
+      <div class="prose" style="max-width:78ch;">
+        <p>A few of the decisions that shaped the final design:</p>
+      </div>
+      <ul class="feature-list" style="margin-top:20px;">
+        <li>
+          <span class="ft">MASS</span>
+          <div>
+            <h4>Generative design over manual topology reduction</h4>
+            <p>Rather than sketching a frame and manually thinning it, I let Fusion 360's solver generate structure directly from the load cases and keep-out zones — a faster way to find an efficient load path than iterating by hand, and the reason the final frame removed 370&nbsp;g versus a conventional layout.</p>
+          </div>
+        </li>
+        <li>
+          <span class="ft">STRUCTURE</span>
+          <div>
+            <h4>Stress-driven material distribution</h4>
+            <p>The static stress analysis wasn't just a final check — its results fed back into a second pass of the geometry, adding material at concentration points and removing it where the model showed margin, rather than treating FEA as a pass/fail gate at the end.</p>
+          </div>
+        </li>
+        <li>
+          <span class="ft">MATERIAL</span>
+          <div>
+            <h4>Nylon 6 for impact tolerance</h4>
+            <p>For the 3D-printed build, nylon 6 was chosen specifically for its impact and fatigue resistance compared to more common FDM materials — directly relevant for a frame that's expected to absorb hard landings in the field.</p>
+          </div>
+        </li>
+        <li>
+          <span class="ft">MANUFACTURING</span>
+          <div>
+            <h4>Building the same concept two ways</h4>
+            <p>Producing both a 3D-printed and a CNC-machined version of the same frame concept was a deliberate choice — it's a direct comparison of how one design intent has to change shape when the manufacturing process changes underneath it.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FINAL RESULT -->
+  <section class="case-block reveal">
+    <div class="case-block-inner">
+      <div class="case-block-head"><span class="n">06</span><h2>Final Result</h2></div>
+      <div class="two-col">
+        <div class="prose">
+          <p>The completed frame, printed in nylon 6 with all four motors, propellers, and the electronics bay installed. The generative lattice is visible throughout the central body, where it carries load between the arms while keeping the printed part light.</p>
+        </div>
+        <figure class="figure">
+          <video src="/videos/quadcopter-turntable.mp4" controls preload="metadata" poster="/images/quadcopter/hero.jpg"></video>
+          <figcaption><span>Completed build, turntable view</span><span>Assembled frame</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="case-block reveal" style="border-bottom:none;">
+    <div class="case-block-inner">
+      <div class="case-block-head"><span class="n">07</span><h2>Skills Demonstrated</h2></div>
+      <div class="skills-tags">
+        <span>Generative Design</span><span>Autodesk Fusion 360</span><span>Static Stress Analysis (FEA)</span>
+        <span>Surface Modeling</span><span>Motion Study</span><span>Design for Additive Manufacturing</span>
+        <span>Material Selection</span><span>Design Optimization</span><span>Load-Case Definition</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="case-nav">
+    <a href="/projects/">← All Projects</a>
+    <a href="/projects/cnc-frame.html">CNC Machined Frame →</a>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-row">
+    <span class="label">© <span id="year"></span> Emir Ozarda — Mechanical Design Portfolio</span>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/emir-ozarda-8288ab197/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://grabcad.com/emir.ozarda-2" target="_blank" rel="noopener">GrabCAD</a>
+      <a href="mailto:emirozarda@hotmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

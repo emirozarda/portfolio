@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CNC Machined Quadcopter Frame — Emir Ozarda | Mechanical Design Portfolio</title>
+<meta name="description" content="Case study: adapting a generatively-designed quadcopter frame for CNC waterjet manufacturing — toolpath generation, profile cuts, and design-for-manufacture tradeoffs.">
+<link rel="canonical" href="https://emirozarda.com/projects/cnc-frame.html">
+<meta property="og:title" content="CNC Machined Quadcopter Frame — Emir Ozarda">
+<meta property="og:description" content="Adapting a quadcopter frame design for CNC waterjet manufacturing.">
+<meta property="og:image" content="/images/cnc/hero.jpg">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="sheet-frame"><i></i></div>
+
+<header class="site-header">
+  <div class="header-row">
+    <a href="/" class="brand">
+      <span class="name">Emir Ozarda</span>
+      <span class="role">Mechanical Designer / EIT</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <nav class="main-nav">
+      <a href="/"><span class="idx">00</span>Home</a>
+      <a href="/projects/" class="current"><span class="idx">01</span>Projects</a>
+      <a href="/experience.html"><span class="idx">02</span>Experience</a>
+      <a href="/about.html"><span class="idx">03</span>About</a>
+      <a href="/resume.html"><span class="idx">04</span>Resume</a>
+      <a href="/contact.html"><span class="idx">05</span>Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="case-hero">
+    <div class="case-hero-top">
+      <div class="breadcrumb">
+        <a href="/projects/">Projects</a><span>/</span><span style="color:var(--ink);">CNC Machined Frame</span>
+      </div>
+      <div class="case-meta-grid">
+        <div>
+          <span class="label accent">Sheet 01.2 — Follow-up Project</span>
+          <h1 style="margin-top:14px;">CNC Machined<br>Quadcopter Frame</h1>
+          <p class="desc">A follow-up to the 3D printed quadcopter — redesigning the same concept around waterjet manufacturing instead of additive.</p>
+        </div>
+        <div class="case-side">
+          <div class="row"><div class="k">Role</div><div class="v">Sole Designer</div></div>
+          <div class="row"><div class="k">Tools</div><div class="v">SolidWorks, CAM Toolpathing</div></div>
+          <div class="row"><div class="k">Manufacturing</div><div class="v">OMAX Waterjet, 1.5&nbsp;mm Tool</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="case-hero-image">
+      <img src="/images/cnc/hero.jpg" alt="CNC waterjet-machined quadcopter frame, top-down view of the flat cut profile" width="1800" height="1095">
+    </div>
+  </div>
+
+  <!-- OVERVIEW -->
+  <section class="case-block reveal">
+    <div class="case-block-inner two-col">
+      <div class="prose">
+        <span class="label accent">01 — Overview</span>
+        <h3 style="margin-top:12px; font-size:22px; font-family:var(--head);">Same mission, different manufacturing method</h3>
+        <p style="margin-top:16px;">After finishing the 3D printed quadcopter, I wanted more direct experience designing for a completely different manufacturing process. Generative, lattice-heavy geometry that prints beautifully in nylon doesn't translate to a flat sheet-cutting process — so this project meant re-thinking the frame from the ground up around what a waterjet can actually produce: 2D profiles cut from flat stock, without the freeform 3D lattice of the printed version.</p>
+        <p>The goal wasn't to out-perform the printed frame — it was to build real fluency in designing for subtractive, sheet-based manufacturing, and to understand how the same design intent has to change shape when the process underneath it changes.</p>
+      </div>
+      <figure class="figure">
+        <img src="/images/cnc/frame-iso.jpg" alt="Isometric render of the CNC waterjet quadcopter frame in flat profile" loading="lazy">
+        <figcaption><span>Flat-profile frame, isometric</span><span>SolidWorks render</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- TOOLPATH GENERATION -->
+  <section class="case-block reveal">
+    <div class="case-block-inner">
+      <div class="case-block-head"><span class="n">02</span><h2>Toolpath Generation &amp; Simulation</h2></div>
+      <div class="prose" style="max-width:78ch;">
+        <p>For this build I selected an <strong>OMAX waterjet cutter</strong> with a <strong>1.5&nbsp;mm waterjet tool</strong>. Because a waterjet removes material along a 2D profile rather than a freeform volume, the frame's arms, motor mounts, and cable-routing slots all had to be laid out as clean, cuttable outlines — no overhangs or internal lattices to worry about, but every profile and lead-in had to be planned so the toolpath would cut cleanly in one pass.</p>
+      </div>
+      <div class="figure-grid" style="margin-top:32px;">
+        <figure class="figure">
+          <img src="/images/cnc/cutouts-toolpath.jpg" alt="CAM toolpath preview showing the cutout and slot profiles for the waterjet-cut quadcopter frame" loading="lazy">
+          <figcaption><span>Cutout profiles</span><span>Toolpath preview</span></figcaption>
+        </figure>
+        <figure class="figure">
+          <img src="/images/cnc/profile-toolpath.jpg" alt="CAM toolpath preview showing the outer profile cut path for the waterjet-cut quadcopter frame" loading="lazy">
+          <figcaption><span>Outer profile cut</span><span>Toolpath preview</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENGINEERING DECISIONS -->
+  <section class="case-block reveal">
+    <div class="case-block-inner">
+      <div class="case-block-head"><span class="n">03</span><h2>Design-for-Manufacture Considerations</h2></div>
+      <ul class="feature-list">
+        <li>
+          <span class="ft">GEOMETRY</span>
+          <div>
+            <h4>Flattening a 3D lattice into a 2D profile</h4>
+            <p>The printed frame's strength came from a freeform, generatively-optimized lattice. A waterjet can only cut through-profiles in flat stock, so the arm geometry, mounting bosses, and cable slots had to be re-derived as a single flat outline that still routed load sensibly between the motor mounts and the center body.</p>
+          </div>
+        </li>
+        <li>
+          <span class="ft">TOOLING</span>
+          <div>
+            <h4>Sizing features to the 1.5&nbsp;mm jet</h4>
+            <p>Every internal corner, slot, and small feature had to stay compatible with what a 1.5&nbsp;mm waterjet stream can actually cut — internal corners come out with a fillet governed by the jet diameter, not a sharp corner, so those tolerances were built into the profile from the start rather than fixed after the fact.</p>
+          </div>
+        </li>
+        <li>
+          <span class="ft">PROCESS</span>
+          <div>
+            <h4>Single-pass toolpath planning</h4>
+            <p>Because waterjet cutting is comparatively slow per linear inch, the cut order and lead-in points were planned to minimize repositioning and keep the part accurately located in the stock through the full cut.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="case-block reveal" style="border-bottom:none;">
+    <div class="case-block-inner">
+      <div class="case-block-head"><span class="n">04</span><h2>Skills Demonstrated</h2></div>
+      <div class="skills-tags">
+        <span>SolidWorks</span><span>Design for Manufacturing (DFM)</span><span>CAM Toolpath Generation</span>
+        <span>Waterjet Machining</span><span>2D Profile Design</span><span>Cross-Process Design Adaptation</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="case-nav">
+    <a href="/projects/quadcopter.html">← 3D Printed Quadcopter</a>
+    <a href="/projects/smart-carrier.html">Smart Carrier →</a>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-row">
+    <span class="label">© <span id="year"></span> Emir Ozarda — Mechanical Design Portfolio</span>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/emir-ozarda-8288ab197/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://grabcad.com/emir.ozarda-2" target="_blank" rel="noopener">GrabCAD</a>
+      <a href="mailto:emirozarda@hotmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
